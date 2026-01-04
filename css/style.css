@@ -93,3 +93,37 @@ footer { text-align: center; padding: 20px; }
     padding: 20px;
     border-right: 1px solid #ccc;
 }
+
+.home-content {
+    display: flex;       /* This turns on the side-by-side layout */
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.text-side {
+    width: 55%;          /* Matches the left box in your drawing */
+}
+
+.image-side {
+    width: 40%;          /* Matches the right box in your drawing */
+}
+
+.front-image {
+    width: 100%;         /* Makes the image fit perfectly in its 40% box */
+    height: auto;
+}
+
+/* This shrinks the top banner */
+.main-banner {
+    width: 60%;         /* Adjust this number to get the perfect size */
+    height: auto;       /* This prevents the image from looking squished */
+    display: block;
+    margin: 0 auto;     /* Centers it if it's not side-by-side yet */
+}
+
+/* This keeps the logo from getting too big */
+.logo {
+    max-width: 150px;
+    height: auto;
+}
