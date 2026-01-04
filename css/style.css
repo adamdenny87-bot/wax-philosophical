@@ -55,3 +55,17 @@ img {
     height: auto;
     border-radius: 8px;    /* Optional: rounds the corners slightly */
 }
+
+/* Fix for the giant social media icons */
+.social-links img {
+    width: 30px;      /* This makes them a normal icon size */
+    height: 30px;
+    margin: 0 10px;   /* Adds a little space between them */
+}
+
+/* Make the footer look cleaner */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
