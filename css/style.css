@@ -16,19 +16,19 @@ body {
 }
 
 .logo-container {
-    width: 25%;
-    padding: 20px;
-    border-right: 1px solid #ccc;
+    width: 30%;
+    padding: 15px;
 }
 
 .logo {
-    max-width: 150px; /* Limits logo size */
+    max-width: 220px; /* Increased from 150px */
+    width: 100%;     /* This ensures it fills the container up to that max-width */
     height: auto;
     display: block;
 }
 
 .header-banner {
-    width: 75%;
+    width: 70%;
     position: relative;
     text-align: center;
     overflow: hidden; /* Keeps the banner inside the box */
