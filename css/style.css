@@ -37,3 +37,21 @@ img {
 .logo {
     width: 150px; 
 }
+
+.top-bar {
+    display: flex;         /* This turns on the side-by-side magic */
+    align-items: center;   /* Centers them vertically */
+    justify-content: space-between; /* Pushes them to opposite sides */
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;          /* Adjust based on your logo size */
+    height: auto;
+}
+
+.main-banner {
+    width: 60%;            /* This makes the banner take up the most room */
+    height: auto;
+    border-radius: 8px;    /* Optional: rounds the corners slightly */
+}
