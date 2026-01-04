@@ -1,0 +1,60 @@
+CSS
+
+/* Layout Structure */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* The Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header Flexbox: Logo and Banner Side-by-Side */
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Helps on mobile */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.main-banner {
+    width: 55%; /* Adjusted so it fits next to the logo */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Fix for the giant social media icons */
+.social-links img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    filter: invert(1); /* Makes icons white if they are black on dark footer */
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #222;
+    color: white;
+}
