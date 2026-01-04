@@ -4,79 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wax Philosophical | Home</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
     <header class="top-bar">
-        <img src="images/wax_logo.png" alt="Wax Philosophical Logo" class="logo">
-        <img src="images/banner.jpg" alt="Vintage record player" class="main-banner">
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="logo-container">
+            <img src="images/wax_logo.png" alt="Wax Philosophical Logo" class="logo">
+        </div>
+        <div class="header-banner">
+            <img src="images/banner.jpg" alt="Header Banner" class="main-banner">
+            <h1 class="header-text">Wax Philosophical</h1>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Our Trading Hours</h2>
-            <table>
-                <caption>Wax Philosophical Store Hours and Location Details</caption>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Hours</th>
-                        <th>Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday - Friday</td>
-                        <td>9:00 AM - 6:00 PM</td>
-                        <td>123 Vinyl Way, Brisbane</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>10:00 AM - 4:00 PM</td>
-                        <td>123 Vinyl Way, Brisbane</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>Closed</td>
-                        <td>Online Store Only</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section>
-            <h2>Get in Touch</h2>
-            <form action="#" method="post">
-                <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" placeholder="Your email.." required>
-
-                <label for="subject">Message:</label>
-                <textarea id="subject" name="subject" placeholder="How can we help?" style="height:150px"></textarea>
-
-                <button type="submit">Submit Message</button>
-            </form>
-        </section>
+    <main class="home-content">
+        <div class="text-side">
+            <h1>The Art of Listening</h1>
+            <p>Vinyl isn't just a medium; it's an experience. At Wax Philosophical, we believe in the ritual of the needle drop and the depth of analog sound.</p>
+            
+            <h2>Our Mission</h2>
+            <p>We curate the finest pressings and share the stories behind the grooves. Whether you're a lifelong collector or just starting your journey, find your sound here.</p>
+        </div>
+        <div class="image-side">
+            <img src="images/turntable.jpg" alt="Vintage Turntable" class="front-image">
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Wax Philosophical</p>
         <div class="social-links">
             <a href="#"><img src="images/soc-fb.svg" alt="Facebook"></a>
             <a href="#"><img src="images/soc-x.svg" alt="X"></a>
             <a href="#"><img src="images/soc-yt.svg" alt="YouTube"></a>
         </div>
+        <p>Copyright 2026 Wax Philosophical</p>
     </footer>
 
 </body>
