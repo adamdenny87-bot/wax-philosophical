@@ -8,9 +8,9 @@ body {
 
 /* 2. Header: Logo (Left) and Banner (Right) */
 .top-bar {
-    display: flex;       /* This is the key! */
-    flex-direction: row; /* Ensures they sit side-by-side */
-    align-items: center; /* Centers them vertically against each other */
+    display: flex;       /* This forces the logo and banner to be side-by-side */
+    flex-direction: row; 
+    align-items: stretch; /* Makes both boxes the same height */
     width: 100%;
     border-bottom: 2px solid #333;
 }
