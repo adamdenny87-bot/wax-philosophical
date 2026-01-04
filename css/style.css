@@ -1,71 +1,60 @@
+CSS
+
 /* Layout Structure */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-
-/* Navigation Bar */
+/* The Navigation Bar */
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Image Formatting (Accessibility) */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.logo {
-    width: 150px; 
-}
-
+/* Header Flexbox: Logo and Banner Side-by-Side */
 .top-bar {
-    display: flex;         /* This turns on the side-by-side magic */
-    align-items: center;   /* Centers them vertically */
-    justify-content: space-between; /* Pushes them to opposite sides */
+    background-color: #333;
+    color: white;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Helps on mobile */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-    width: 150px;          /* Adjust based on your logo size */
+    width: 150px;
     height: auto;
 }
 
 .main-banner {
-    width: 60%;            /* This makes the banner take up the most room */
+    width: 55%; /* Adjusted so it fits next to the logo */
     height: auto;
-    border-radius: 8px;    /* Optional: rounds the corners slightly */
+    border-radius: 8px;
 }
 
 /* Fix for the giant social media icons */
 .social-links img {
-    width: 30px;      /* This makes them a normal icon size */
-    height: 30px;
-    margin: 0 10px;   /* Adds a little space between them */
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    filter: invert(1); /* Makes icons white if they are black on dark footer */
 }
 
-/* Make the footer look cleaner */
 footer {
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 40px 20px;
+    background-color: #222;
+    color: white;
 }
