@@ -1,113 +1,66 @@
-/* --- Global Reset --- */
+/* --- Global Reset & Colors --- */
+* { box-sizing: border-box; }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #000;
+    background-color: #fff;
+    line-height: 1.6;
 }
 
-/* --- Header & Banner --- */
-.top-bar {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 2px solid #000;
-}
-
-.logo-container { flex: 0 0 120px; }
+/* --- Shared Header & Nav --- */
+.top-bar { display: flex; align-items: center; padding: 10px 20px; border-bottom: 2px solid #000; }
+.logo-container { flex: 0 0 100px; }
 .logo { width: 100%; height: auto; }
-.header-banner { flex-grow: 1; height: 120px; position: relative; overflow: hidden; }
+.header-banner { flex-grow: 1; height: 120px; position: relative; overflow: hidden; margin-left: 20px; }
 .main-banner { width: 100%; height: 100%; object-fit: cover; }
-.header-text { position: absolute; top: 50%; left: 20px; transform: translateY(-50%); color: #fff; text-shadow: 2px 2px 4px #000; margin: 0; }
+.header-text { position: absolute; top: 50%; left: 30px; transform: translateY(-50%); color: #fff; text-shadow: 2px 2px 5px #000; margin: 0; font-size: 2.5rem; }
 
-/* --- Navigation --- */
 .main-nav ul { display: flex; list-style: none; padding: 0; margin: 0; border-bottom: 1px solid #000; }
 .main-nav li { flex: 1; text-align: center; }
-.main-nav a { display: block; padding: 15px; text-decoration: none; color: #000; font-weight: bold; }
+.main-nav a { display: block; padding: 15px; text-decoration: none; color: #000; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+.main-nav a:hover { background-color: #f0f0f0; }
 
-/* --- THE SIDE-BY-SIDE FIX --- */
+/* --- HOME PAGE: Split Hero Layout --- */
 .hero-split {
-    display: flex !important;   /* Forces the horizontal layout */
-    flex-direction: row;        /* Side-by-side */
-    flex-wrap: nowrap;          /* Prevents dropping to next line */
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 60px 40px;
     max-width: 1200px;
     margin: 0 auto;
     gap: 50px;
 }
+.hero-text-content { flex: 1; }
+.hero-image { flex: 1; text-align: right; }
+.hero-image img { width: 100%; max-width: 500px; border: 1px solid #000; box-shadow: 10px 10px 0px #f0f0f0; }
 
-.hero-text-content {
-    flex: 1; /* Takes up left half */
-}
+.content-block { margin-bottom: 40px; }
+.content-block h3 { border-bottom: 2px solid #000; display: inline-block; margin-bottom: 15px; font-size: 1.5rem; }
 
-.hero-image {
-    flex: 1; /* Takes up right half */
-    text-align: right;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border: 1px solid #ccc;
-}
-
-.content-block h3 {
-    border-bottom: 2px solid #000;
-    display: inline-block;
-    margin-bottom: 15px;
-}
-
-/* --- Footer --- */
-footer { text-align: center; padding: 40px; margin-top: 40px; border-top: 1px solid #ccc; }
-.social-links img { height: 24px; margin: 0 10px; }/* --- Gallery Specific Styles --- */
-.gallery-container {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.gallery-container h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    border-bottom: 2px solid #000;
-    display: block;
-}
+/* --- GALLERY PAGE: 3-Column Grid --- */
+.gallery-container { padding: 60px 40px; max-width: 1200px; margin: 0 auto; }
+.section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; text-transform: uppercase; border-bottom: 2px solid #000; padding-bottom: 10px; }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Forces 3 equal columns */
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 40px;
 }
+.record-card { text-align: center; }
+.record-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #000; margin-bottom: 15px; transition: transform 0.3s ease; }
+.record-card img:hover { transform: scale(1.02); }
+.record-card h3 { margin: 10px 0 5px; font-size: 1.2rem; }
+.record-card p { color: #666; font-style: italic; }
 
-.record {
-    text-align: center;
-    background: #fff;
-    padding: 10px;
-}
+/* --- Footer --- */
+footer { text-align: center; padding: 50px 20px; border-top: 1px solid #eee; margin-top: 40px; }
+.social-links img { height: 28px; margin: 0 15px; opacity: 0.8; }
+.social-links img:hover { opacity: 1; }
 
-.record img {
-    width: 100%;
-    height: 300px;      /* Keeps all record covers the same size */
-    object-fit: cover;  /* Crops image to fit the square without stretching */
-    border: 1px solid #000;
-    margin-bottom: 15px;
-}
-
-.record h3 {
-    margin: 10px 0 5px 0;
-    font-size: 1.2rem;
-}
-
-.record p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Mobile Fix: Stack records in 1 column on phones */
+/* --- Responsiveness --- */
 @media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
+    .hero-split, .gallery-grid { flex-direction: column; grid-template-columns: 1fr; }
+    .hero-image { order: -1; margin-bottom: 30px; }
 }
