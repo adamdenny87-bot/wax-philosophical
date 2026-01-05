@@ -1,24 +1,23 @@
-/* --- 1. Global Reset & Typography --- */
+/* --- Global Styles --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #000000; /* Ensures all body text is black */
+    background-color: #ffffff;
     line-height: 1.6;
 }
 
-/* --- 2. Header & Banner Layout --- */
+/* --- Header & Banner --- */
 .top-bar {
     display: flex;
     align-items: center;
     padding: 10px 20px;
     border-bottom: 2px solid #000;
-    background-color: #fff;
 }
 
 .logo-container {
-    flex: 0 0 120px; /* Locks logo width */
-    margin-right: 20px;
+    flex: 0 0 120px;
 }
 
 .logo {
@@ -29,7 +28,7 @@ body {
 
 .header-banner {
     flex-grow: 1;
-    height: 120px; /* Fixed height for the banner area */
+    height: 120px;
     position: relative;
     overflow: hidden;
 }
@@ -37,22 +36,20 @@ body {
 .main-banner {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents stretching */
-    display: block;
+    object-fit: cover;
 }
 
 .header-text {
     position: absolute;
     top: 50%;
-    left: 30px;
+    left: 20px;
     transform: translateY(-50%);
-    color: white;
+    color: #ffffff; /* Only banner text is white */
     margin: 0;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 8px #000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-/* --- 3. Navigation (3 Equal Tabs) --- */
+/* --- Navigation --- */
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -64,11 +61,6 @@ body {
 .main-nav li {
     flex: 1;
     text-align: center;
-    border-right: 1px solid #ccc;
-}
-
-.main-nav li:last-child {
-    border-right: none;
 }
 
 .main-nav a {
@@ -84,280 +76,70 @@ body {
     background-color: #f4f4f4;
 }
 
-/* --- 4. Home Page Content --- */
-.hero-section {
-    display: flex;
-    padding: 60px 40px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hero-text {
-    flex: 1;
-    padding-right: 40px;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-/* --- 5. Gallery Grid --- */
-.gallery-container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.record {
-    text-align: center;
-}
-
-.record img {
-    width: 100%;
-    height: 300px; /* Uniform size for all records */
-    object-fit: cover;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-/* --- 6. Contact Form (Matched to Sketch) --- */
-.contact-container {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 20px;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Labels left, inputs right */
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    margin-right: 20px;
-    font-weight: bold;
-}
-
-.form-group input[type="text"],
-.form-group select {
-    width: 300px;
-    padding: 8px;
-    border: 1px solid #000;
-}
-
-.radio-group input {
-    margin: 0 10px;
-}
-
-.inline-group {
-    justify-content: center;
-    padding-left: 50px;
-}
-
-.submit-btn {
-    margin-left: 20px;
-    padding: 10px 30px;
-    background: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.submit-btn:hover {
-    background: #333;
-}
-
-/* --- 7. Footer --- */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-    margin-top: 60px;
-}
-
-.social-links {
-    margin-bottom: 15px;
-}
-
-.social-links img {
-    height: 24px;
-    margin: 0 15px;
-    transition: transform 0.2s;
-}
-
-.social-links img:hover {
-    transform: scale(1.2);
-}/* Home Page Site Map */
-.site-map-section {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    border-top: 1px solid #ddd;
-}
-
-.site-map-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.site-map-container h3 {
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.sitemap-grid {
-    display: flex;
-    justify-content: space-around;
-}
-
-.sitemap-col h4 {
-    border-bottom: 2px solid #000;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-.sitemap-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sitemap-col li {
-    margin-bottom: 8px;
-}
-
-.sitemap-col a {
-    text-decoration: none;
-    color: #444;
-    transition: color 0.2s;
-}
-
-.sitemap-col a:hover {
-    color: #000;
-    text-decoration: underline;
-}.home-content-blocks {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.content-block {
-    margin-bottom: 30px;
-}
-
-.content-block h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #000;
-    display: inline-block;
-}
-
-.content-block p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}/* General Setup */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #000000; /* Forces all text to be black by default */
-    background-color: #ffffff;
-}
-
-/* Header & Banner */
-.top-bar { display: flex; align-items: center; padding: 10px 20px; border-bottom: 2px solid #000; }
-.logo-container { flex: 0 0 120px; }
-.logo { width: 100%; height: auto; }
-.header-banner { flex-grow: 1; height: 120px; position: relative; overflow: hidden; }
-.main-banner { width: 100%; height: 100%; object-fit: cover; }
-
-/* This is the ONLY white text on the site */
-.header-text { 
-    position: absolute; 
-    top: 50%; 
-    left: 20px; 
-    transform: translateY(-50%); 
-    color: #ffffff; 
-    margin: 0; 
-    text-shadow: 2px 2px 4px #000; 
-}
-
-/* Navigation */
-.main-nav ul { display: flex; list-style: none; padding: 0; margin: 0; border-bottom: 1px solid #000; }
-.main-nav li { flex: 1; text-align: center; }
-.main-nav a { display: block; padding: 15px; text-decoration: none; color: #000; font-weight: bold; }
-
-/* Hero Section */
-.hero-section { display: flex; padding: 40px; align-items: center; gap: 20px; }
-.hero-content { flex: 1; color: #000; }
-.hero-image img { width: 100%; max-width: 400px; border: 1px solid #ddd; }
-
-/* Two Paragraphs Section */
-.info-section { padding: 0 40px 40px 40px; }
-.info-block { margin-bottom: 30px; }
-.info-block h3 { color: #000; border-bottom: 1px solid #000; display: inline-block; margin-bottom: 10px; }
-.info-block p { color: #000; line-height: 1.6; max-width: 800px; }
-
-/* Footer */
-footer { text-align: center; padding: 20px; border-top: 1px solid #ccc; margin-top: 20px; }
-.social-links img { height: 24px; margin: 0 10px; }/* Split Hero Section */
+/* --- Hero Split Layout --- */
 .hero-split {
     display: flex;
-    align-items: center; /* Vertically centers the text and image */
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 40px;
+    padding: 60px 40px;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 40px;
+    gap: 50px;
 }
 
 .hero-text-content {
-    flex: 1; /* Takes up half the space */
+    flex: 1.2; /* Gives text slightly more room than the image */
 }
 
 .hero-image {
-    flex: 1; /* Takes up the other half */
+    flex: 1;
+    text-align: right;
 }
 
 .hero-image img {
     width: 100%;
     max-width: 500px;
     height: auto;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
 }
 
 .content-block {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .content-block h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
     border-bottom: 2px solid #000;
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 .content-block p {
-    line-height: 1.6;
-    color: #000;
+    font-size: 1.05rem;
+    color: #333;
 }
 
-/* Mobile responsive - stacks them on top of each other */
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
+}
+
+.social-links img {
+    height: 24px;
+    margin: 0 15px;
+}
+
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .hero-split {
         flex-direction: column;
         padding: 20px;
+    }
+    .hero-image {
+        text-align: center;
     }
 }
