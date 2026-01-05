@@ -1,239 +1,35 @@
-/* 1. General Styles */
-body { 
-    font-family: sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    background-color: #ffffff;
-}
+/* General Layout */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
 
-/* 2. Header: Logo (Left) and Banner (Right) */
-.top-bar {
-    display: flex;       /* This forces the logo and banner to be side-by-side */
-    flex-direction: row; 
-    align-items: stretch; /* Makes both boxes the same height */
-    width: 100%;
-    border-bottom: 2px solid #333;
-}
+/* Header & Banner */
+.top-bar { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #000; }
+.logo { height: 60px; margin-right: 20px; }
+.header-banner { position: relative; flex-grow: 1; }
+.main-banner { width: 100%; height: 100px; object-fit: cover; }
+.header-text { position: absolute; top: 50%; left: 20px; transform: translateY(-50%); color: white; margin: 0; text-shadow: 2px 2px 4px #000; }
 
-.logo-container {
-    width: 30%;
-    padding: 15px;
-}
+/* Navigation - 3 Equal Tabs */
+.main-nav ul { display: flex; list-style: none; padding: 0; margin: 0; border-bottom: 1px solid #000; }
+.main-nav li { flex: 1; text-align: center; border-right: 1px solid #ccc; }
+.main-nav a { display: block; padding: 15px; text-decoration: none; color: black; font-weight: bold; }
+.main-nav a:hover { background-color: #f0f0f0; }
 
-.logo {
-    max-width: 220px; /* Increased from 150px */
-    width: 100%;     /* This ensures it fills the container up to that max-width */
-    height: auto;
-    display: block;
-}
+/* Home Content */
+.hero-section { display: flex; padding: 40px; align-items: center; }
+.hero-text { flex: 1; }
+.hero-image img { width: 100%; max-width: 400px; }
 
-.header-banner {
-    width: 70%;
-    position: relative;
-    text-align: center;
-    overflow: hidden; /* Keeps the banner inside the box */
-}
+/* Gallery Grid */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 40px; }
+.record { text-align: center; }
+.record img { width: 100%; border: 1px solid #ddd; }
 
-.main-banner {
-    width: 100%;      /* Tells banner to fill its 75% box, not the whole screen */
-    height: auto;
-    display: block;
-}
+/* Contact Form Alignment */
+.contact-container { max-width: 500px; margin: 40px auto; }
+.form-group { display: flex; align-items: center; justify-content: flex-end; margin-bottom: 15px; }
+.form-group label { margin-right: 10px; }
+.form-group input[type="text"] { width: 250px; }
 
-.header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    margin: 0;
-}
-
-/* 3. Navigation Bar */
-.main-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 15px;
-    margin: 0;
-    background: #f4f4f4;
-    border-bottom: 1px solid #ccc;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* 4. Main Content: Text (Left) and Turntable (Right) */
-.home-content {
-    display: flex;
-    padding: 40px;
-    gap: 5%;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.text-side {
-    width: 55%;
-}
-
-.image-side {
-    width: 40%;
-}
-
-.front-image {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-}
-
-/* 5. Footer and Socials */
-footer { 
-    text-align: center; 
-    padding: 40px 20px; 
-    border-top: 1px solid #ccc;
-}
-
-.social-links img { 
-    width: 40px; 
-    margin: 0 10px; 
-}
-/* Gallery Page Specifics */
-.gallery-container {
-    padding: 40px;
-    background-color: #fff;
-}
-
-.gallery-grid {
-    display: grid;
-    /* This creates as many columns as will fit, at least 250px wide each */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    padding: 20px;
-}
-
-.record {
-    background: #f9f9f9;
-    padding: 15px;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease;
-}
-
-.record:hover {
-    transform: scale(1.05); /* Makes the record pop slightly when hovered */
-}
-
-.record img {
-    width: 100%;
-    height: auto;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
-}
-
-.record p {
-    margin: 15px 0 5px 0;
-    font-weight: bold;
-    color: #333;
-}
-
-.record span {
-    color: #777;
-    font-style: italic;
-}/* Contact Form Styles */
-.contact-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-top: 20px;
-}
-
-.contact-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input, .contact-form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-family: inherit;
-}
-
-.submit-btn {
-    background-color: #333;
-    color: white;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #555;
-}.record {
-    text-align: center; /* This ensures text stays centered under the image like your drawing */
-    padding-bottom: 20px;
-}
-
-.record h3 {
-    margin: 15px 0 5px 0; /* Spacing for the heading */
-    font-size: 1.2rem;
-}
-
-.record p {
-    margin: 0;
-    color: #666; /* Makes the description slightly lighter as in most wireframes */
-}.contact-container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Pushes inputs to the right like the sketch */
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    margin-right: 15px;
-    font-weight: bold;
-}
-
-.form-group input[type="text"], 
-.form-group select {
-    width: 250px;
-    padding: 5px;
-    border: 1px solid #000;
-}
-
-.radio-group input {
-    margin: 0 10px;
-}
-
-.inline-group {
-    justify-content: flex-start;
-    padding-left: 85px; /* Adjusts the checkbox and button alignment */
-}
-
-.submit-btn {
-    margin-left: 20px;
-    padding: 5px 20px;
-    background: white;
-    border: 1px solid #000;
-    cursor: pointer;
-}
+/* Footer */
+footer { text-align: center; padding: 20px; border-top: 1px solid #ccc; margin-top: 40px; }
+.social-links img { height: 30px; margin: 0 10px; }
