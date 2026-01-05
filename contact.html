@@ -1,5 +1,3 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,28 +27,45 @@ HTML
     </nav>
 
     <main class="contact-container">
-        <h1>Contact Us</h1>
-        <p>Looking for a specific pressing? Want to talk shop? Drop us a line below.</p>
-        
-        <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <form class="wireframe-form">
+            <div class="form-group">
+                <label>Field Label:</label>
+                <input type="text">
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <div class="form-group">
+                <label>Field Label:</label>
+                <select>
+                    <option value="">Select Option</option>
+                    <option value="1">Option 1</option>
+                </select>
+            </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"></textarea>
+            <div class="form-group radio-group">
+                <label>Field Label:</label>
+                <input type="radio" name="choice">
+                <label>Field Label:</label>
+                <input type="radio" name="choice">
+            </div>
 
-            <button type="submit" class="submit-btn">Send Needle Drop</button>
+            <div class="form-group">
+                <label>Field Label:</label>
+                <input type="text">
+            </div>
+
+            <div class="form-group inline-group">
+                <label>Field Label:</label>
+                <input type="checkbox">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
         </form>
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="#"><img src="images/soc-fb.svg" alt="Facebook"></a>
-            <a href="#"><img src="images/soc-x.svg" alt="X"></a>
-            <a href="#"><img src="images/soc-yt.svg" alt="YouTube"></a>
+            <a href="#"><img src="images/soc-x.svg" alt="T"></a>
+            <a href="#"><img src="images/soc-fb.svg" alt="F"></a>
+            <a href="#"><img src="images/soc-yt.svg" alt="UT"></a>
         </div>
         <p>Copyright 2026 Wax Philosophical</p>
     </footer>

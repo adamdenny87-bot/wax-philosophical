@@ -196,4 +196,44 @@ footer {
 .record p {
     margin: 0;
     color: #666; /* Makes the description slightly lighter as in most wireframes */
+}.contact-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Pushes inputs to the right like the sketch */
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"], 
+.form-group select {
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+.radio-group input {
+    margin: 0 10px;
+}
+
+.inline-group {
+    justify-content: flex-start;
+    padding-left: 85px; /* Adjusts the checkbox and button alignment */
+}
+
+.submit-btn {
+    margin-left: 20px;
+    padding: 5px 20px;
+    background: white;
+    border: 1px solid #000;
+    cursor: pointer;
 }
