@@ -61,4 +61,53 @@ body {
 
 /* --- Footer --- */
 footer { text-align: center; padding: 40px; margin-top: 40px; border-top: 1px solid #ccc; }
-.social-links img { height: 24px; margin: 0 10px; }
+.social-links img { height: 24px; margin: 0 10px; }/* --- Gallery Specific Styles --- */
+.gallery-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #000;
+    display: block;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces 3 equal columns */
+    gap: 30px;
+}
+
+.record {
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+}
+
+.record img {
+    width: 100%;
+    height: 300px;      /* Keeps all record covers the same size */
+    object-fit: cover;  /* Crops image to fit the square without stretching */
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.record h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.2rem;
+}
+
+.record p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Mobile Fix: Stack records in 1 column on phones */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
