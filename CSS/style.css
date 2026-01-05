@@ -63,4 +63,73 @@ footer { text-align: center; padding: 50px 20px; border-top: 1px solid #eee; mar
 @media (max-width: 768px) {
     .hero-split, .gallery-grid { flex-direction: column; grid-template-columns: 1fr; }
     .hero-image { order: -1; margin-bottom: 30px; }
+}/* --- Contact Page Specific Styles --- */
+.contact-main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-form-section, .business-info {
+    flex: 1;
+}
+
+/* Form Styling */
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-section label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form-section input[type="text"], 
+.contact-form-section select, 
+.contact-form-section textarea {
+    padding: 10px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+/* --- Data Table Styling --- */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.info-table th, .info-table td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-table th {
+    background-color: #f9f9f9;
+    width: 40%;
+}
+
+/* Mobile Fix for Table/Form */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+    }
 }

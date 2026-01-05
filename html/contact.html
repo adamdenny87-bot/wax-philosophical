@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wax Philosophical | Contact</title>
-    <link rel="stylesheet" href="../CSS/style.css"> 
+    <link rel="stylesheet" href="../CSS/style.css?v=2"> 
 </head>
 <body>
+
     <header class="top-bar">
         <div class="logo-container">
             <img src="../images/wax_logo.png" alt="Wax Philosophical Logo" class="logo">
@@ -25,32 +26,72 @@
         </ul>
     </nav>
 
-    <main class="contact-container">
-        <form class="wireframe-form">
-            <div class="form-group"><label>Field Label:</label><input type="text"></div>
-            <div class="form-group">
-                <label>Field Label:</label>
-                <select><option value="">Select Option</option></select>
-            </div>
-            <div class="form-group radio-group">
-                <label>Field Label:</label><input type="radio" name="r">
-                <label>Field Label:</label><input type="radio" name="r">
-            </div>
-            <div class="form-group"><label>Field Label:</label><input type="text"></div>
-            <div class="form-group inline-group">
-                <label>Field Label:</label><input type="checkbox">
-                <button type="submit" class="submit-btn">Submit</button>
-            </div>
-        </form>
+    <main class="contact-main">
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-grid">
+            <section class="contact-form-section">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="subject">Reason for Inquiry:</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Question</option>
+                        <option value="collection">Sell My Collection</option>
+                        <option value="repair">Turntable Repair</option>
+                    </select>
+
+                    <p>Preferred Contact Method:</p>
+                    <input type="radio" id="email-pref" name="contact-pref" value="email">
+                    <label for="email-pref">Email</label>
+                    <input type="radio" id="phone-pref" name="contact-pref" value="phone">
+                    <label for="phone-pref">Phone</label>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+
+                    <div class="checkbox-area">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Join our monthly newsletter</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </section>
+
+            <section class="business-info">
+                <h3>Business Details</h3>
+                <table class="info-table">
+                    <tr>
+                        <th>Admin Contact Name</th>
+                        <td>Adam Denny</td>
+                    </tr>
+                    <tr>
+                        <th>Email Address</th>
+                        <td>contact@waxphilosophical.com</td>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <td>123 Vinyl Way, Brisbane, QLD</td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td>(07) 1234 5678</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="#"><img src="../images/soc-x.svg" alt="T"></a>
-            <a href="#"><img src="../images/soc-fb.svg" alt="F"></a>
-            <a href="#"><img src="../images/soc-yt.svg" alt="UT"></a>
+            <a href="#"><img src="../images/soc-x.svg" alt="X"></a>
+            <a href="#"><img src="../images/soc-fb.svg" alt="Facebook"></a>
+            <a href="#"><img src="../images/soc-yt.svg" alt="YouTube"></a>
         </div>
         <p>Copyright 2026 Wax Philosophical</p>
     </footer>
+
 </body>
 </html>
